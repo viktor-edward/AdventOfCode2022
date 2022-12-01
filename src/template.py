@@ -1,11 +1,7 @@
-import math
-
-
 def readFile(fileInput):
-    f = open(fileInput, 'r')
     data = []
     with open(fileInput, "r") as file:
-        for line in f.readlines():
+        for line in file.readlines():
             data.append(int(line.replace("\n", "")))
     return data
 
@@ -19,7 +15,7 @@ def func2(data):
 
 
 def main():
-    data = readFile("../resources/day2_input.txt")
+    data = readFile("../resources/day1_input.txt")
 
     print("Part one: ")
 

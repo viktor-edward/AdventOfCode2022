@@ -1,17 +1,13 @@
-import math
-
-
 def readFile(fileInput):
-    f = open(fileInput, 'r')
     data = []
     tempSum = 0
     with open(fileInput, "r") as file:
-        for line in f.readlines():
+        for line in file.readlines():
             if "\n" == line:
                 data.append(tempSum)
                 tempSum = 0
             else:
-                tempSum += int(int(line.replace("\n", "")))
+                tempSum += int(line.replace("\n", ""))
         data.append(tempSum)
     return data
 
