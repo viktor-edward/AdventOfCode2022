@@ -9,7 +9,7 @@ def readFile(fileInput):
     return data
 
 
-def setScores() -> defaultdict:
+def getScores() -> defaultdict:
     scores = defaultdict(dict)
     scores["A"]["X"] = 3 + 1
     scores["A"]["Y"] = 6 + 2
@@ -23,7 +23,7 @@ def setScores() -> defaultdict:
     return scores
 
 
-def setAction() -> defaultdict:
+def getAction() -> defaultdict:
     action = defaultdict(dict)
     action["A"]["X"] = "Z"
     action["A"]["Y"] = "X"
@@ -38,10 +38,10 @@ def setAction() -> defaultdict:
 
 
 def main():
-    scores = setScores()
     strategy = readFile("../resources/day2_input.txt")
 
     print("Part one: ")
+    scores = getScores()
     totalScore = 0
     for match in strategy:
         opponent, you = match[0], match[1]
@@ -50,7 +50,7 @@ def main():
 
     print("Part two: ")
     totalScore = 0
-    action = setAction()
+    action = getAction()
     for match in strategy:
         opponent, you = match[0], match[1]
         youNew = action[opponent][you]
