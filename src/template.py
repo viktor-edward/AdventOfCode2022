@@ -6,14 +6,6 @@ def readFile(fileInput):
     return data
 
 
-def func1(data):
-    return 0
-
-
-def func2(data):
-    return 0
-
-
 def main():
     data = readFile("../resources/day1_input.txt")
 

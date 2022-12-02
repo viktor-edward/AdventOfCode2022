@@ -20,7 +20,7 @@ def main():
 
     print("Part two: ")
     data.sort(reverse=True)
-    print(sum(data[0:3]))
+    print(sum(data[:3]))
 
 
 if __name__ == '__main__':
