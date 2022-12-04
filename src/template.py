@@ -1,4 +1,4 @@
-def readFile(fileInput):
+def readFile(fileInput: str) -> list:
     data = []
     with open(fileInput, "r") as file:
         for line in file.readlines():
@@ -11,7 +11,7 @@ def main():
 
     print("Part one: ")
 
-    print("Part two: ")
+    print("\nPart two: ")
 
 
 if __name__ == '__main__':
