@@ -1,4 +1,4 @@
-def readFile(fileInput: str) -> list:
+def readFile(fileInput: str) -> str:
     with open(fileInput, "r") as file:
         for line in file.readlines():
             return line
