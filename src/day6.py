@@ -5,10 +5,7 @@ def readFile(fileInput: str) -> list:
 
 
 def containsDuplicates(strToCheck: str) -> bool:
-    uniqueChars = set()
-    for x in strToCheck:
-        uniqueChars.add(x)
-    if len(set(uniqueChars)) == len(strToCheck):
+    if len(set(strToCheck)) == len(strToCheck):
         return False
     else:
         return True
