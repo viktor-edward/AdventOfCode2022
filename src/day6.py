@@ -4,21 +4,13 @@ def readFile(fileInput: str) -> list:
             return line
 
 
-def containsDuplicates(strToCheck: str) -> bool:
-    if len(set(strToCheck)) == len(strToCheck):
-        return False
-    else:
-        return True
-
-
 def main():
-    signal = readFile("../resources/day6_input.txt")
-
     print("Part one: ")
+    signal = readFile("../resources/day6_input.txt")
     block = signal[:4]
     signal = signal[4:]
     for i, x in enumerate(signal):
-        if containsDuplicates(block):
+        if len(set(block)) != len(block):
             block = block[1:] + x[0]
         else:
             break
@@ -29,7 +21,7 @@ def main():
     block = signal[:14]
     signal = signal[14:]
     for i, x in enumerate(signal):
-        if containsDuplicates(block):
+        if len(set(block)) != len(block):
             block = block[1:] + x[0]
         else:
             break
