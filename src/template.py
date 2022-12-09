@@ -1,7 +1,7 @@
 def readFile(fileInput: str) -> list:
     data = []
-    with open(fileInput, "r") as file:
-        for line in file.readlines():
+    with open(fileInput, "r") as f:
+        for line in f.readlines():
             data.append(int(line.replace("\n", "")))
     return data
 
